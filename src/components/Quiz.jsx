@@ -70,25 +70,28 @@ function Quiz() {
               option="a"
               answer={questions[number].options.a}
               id={questions[number].correct}
-              index={number}
+              index={number} identify ="inner-Question-Wrapper"
             />
             <Option
               option="b"
               answer={questions[number].options.b}
               id={questions[number].correct}
               index={number}
+              identify ="inner-Question-Wrapper"
             />
             <Option
               option="c"
               answer={questions[number].options.c}
               id={questions[number].correct}
               index={number}
+              identify ="inner-Question-Wrapper"
             />
             <Option
               option="d"
               answer={questions[number].options.d}
               id={questions[number].correct}
               index={number}
+              identify ="inner-Question-Wrapper"
             />
           </div>
         ) : (

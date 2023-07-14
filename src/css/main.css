@@ -548,6 +548,10 @@ video {
   padding: 25px;
 }
 
+#highlight{
+  border: 2px solid lightgreen;
+}
+
 .Options {
   display: flex;
   width: 85vw;

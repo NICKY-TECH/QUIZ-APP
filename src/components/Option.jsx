@@ -8,9 +8,25 @@ function scoreResult() {
   return (score = right.length);
 }
 function Option(props) {
-  function check(event) {
+  let general = document.getElementsByClassName(`Option`);
+  // console.log('general');
+  let arr =Array.from(general);
+  arr.map((item)=>{
+    item.style.backgroundColor ="#f5fefd";
+  
+  })
 
+  async function check(event) {
     if (event.target.className == "letter") {
+      let general = document.getElementsByClassName(`Option`);
+      // console.log('general');
+      let arr =Array.from(general);
+      await arr.map((item)=>{
+        item.style.backgroundColor ="#f5fefd";
+      
+      })
+
+      event.target.parentElement.style.backgroundColor="lightgreen";
       if (event.target.id == event.target.innerHTML) {
         let found = state.filter((obj) => {
           return obj.id == props.index;
@@ -122,7 +138,7 @@ function Option(props) {
   }
 
   return (
-    <>
+    <div className="general">
       {props.option != "score" ? (
         <div
           className="Option"
@@ -143,7 +159,7 @@ function Option(props) {
           </span>
         </div>
       )}
-    </>
+    </div>
   );
 }
 export default Option;

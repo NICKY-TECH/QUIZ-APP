@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Option {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #f5fefd;
+  padding: 25px;
+}
+
+.Options {
+  display: flex;
+  width: 85vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5fefd;
+  margin-bottom: 20px;
+  font-size: 2.3em;
+  padding: 25px;
+}
+
+.inner-Question-Wrapper2{
+  width: 100%;
+}
+
+.Option:hover {
+  cursor: pointer;
+}
+
+.letter {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 400;
+  background-color: black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.letter:hover {
+  cursor: pointer;
+}
+
+.answer {
+  margin-top: 3px;
+}
+
+.Container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-right: 10px;
+}

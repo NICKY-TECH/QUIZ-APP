@@ -37,7 +37,10 @@ const questions = [
 
 function Quiz() {
   //   const len = questions.length;
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState("home");
+  function startGame() {
+    setNumber(0);
+  }
   function prev() {
     if (number != 0) {
       setNumber(number - 1);
@@ -55,7 +58,12 @@ function Quiz() {
   return (
     <div className="Container">
       <div>
-        {number != "score" ? (
+        {number == "home" ? (
+          <div className="inner-Question-Wrapper3">
+            <h1>WELCOME TO MEGA QUIZ-APP</h1>
+            <button onClick={startGame}>CLICK TO START GAME</button>
+          </div>
+        ) :  number != "score" ? (
           <div className="inner-Question-Wrapper">
             <Question question={questions[number].q} />
             <Option
@@ -88,7 +96,7 @@ function Quiz() {
             <Option option="score" total={questions.length} />
           </div>
         )}
-        {number != "score" ? (
+        {number != "score" && number !="home" ? (
           <div className="Buttons">
             <button onClick={prev} label="Prev">
               Prev
@@ -100,6 +108,7 @@ function Quiz() {
         ) : (
           ""
         )}
+       
       </div>
     </div>
   );

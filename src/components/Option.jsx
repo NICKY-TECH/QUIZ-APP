@@ -77,6 +77,15 @@ function Option(props) {
         }
       }
     } else {
+      let general = document.getElementsByClassName(`Option`);
+      // console.log('general');
+      let arr =Array.from(general);
+      await arr.map((item)=>{
+        item.style.backgroundColor ="#f5fefd";
+      
+      })
+
+      event.target.parentElement.style.backgroundColor="lightgreen";
       if (
         event.target.parentElement.children[0].id ==
         event.target.parentElement.children[0].innerHTML
